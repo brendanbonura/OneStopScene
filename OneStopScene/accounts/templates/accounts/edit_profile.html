@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Edit Profile</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<br>
+	<form method="post" enctype="multipart/form-data" role="form">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Edit</button>
+	</form>
+	<br>
+</div>
+{% endblock %}

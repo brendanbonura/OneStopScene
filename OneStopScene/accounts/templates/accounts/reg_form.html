@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+	<br>
+	<h1>Join OneStopScene!</h1>
+	<br>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Register</button>
+	</form>
+</div>
+{% endblock %}

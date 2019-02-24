@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Profile</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<br>
+	<div class="card-group">
+	
+		<div class="card">
+		{% if user.userprofile.image %}
+			<img class="card-img-top" src="{{ user.userprofile.image.url }}" width="400">
+		{% endif %}
+		<div class="card-body">
+		<h1 class="card-title">{{ user.first_name }} {{ user.last_name }}</h1>
+		<br>
+		</div>
+		</div>
+	
+		<div class="card">
+		<div class="card-body">
+		<p class="card-text">{{ user.userprofile.description }}</p>
+		<p class="card-text">Username: {{ user }}</p>
+		<p class="card-text">Phone: {{ user.userprofile.phone }}</p>
+		<p class="card-text">Email: {{ user.email }}</p>
+		<p class="card-text">City: {{ user.userprofile.city }}</p>
+		<a href="{{ user.userprofile.website }}">{{ user }}'s Website</a>
+		</div>
+		</div>
+	
+	</div>
+</div>
+{% endblock %}

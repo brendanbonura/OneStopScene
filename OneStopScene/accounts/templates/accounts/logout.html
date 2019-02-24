@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+	<br>
+	<h1>You have logged out!</h1>
+	<br>
+	<p>
+	You are being redirected...
+	</p>
+	<meta http-equiv="refresh" content="2; URL={% url 'home:home' %}">
+	<meta name="keywords" content="automatic redirection">
+</div>
+{% endblock %}
